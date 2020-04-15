@@ -14,6 +14,8 @@
 - Get connected to Google News API and pull information to our program
 - Impove manageData.py for more fucntions
 
+**Meghana Shastri**
+- Doing research on how to connect to the Google News API 
 
 **Meghana Shastri TODO**
 - After Peter is able to establish a connection to the Google news API, I will write a program that will sort through the API to get the top 10 news articles with the most visits.
