@@ -13,3 +13,8 @@
 **Peter TODO**
 - Get connected to Google News API and pull information to our program
 - Impove manageData.py for more fucntions
+
+
+**Meghana Shastri TODO**
+- After Peter is able to establish a connection to the Google news API, I will write a program that will sort through the API to get the top 10 news articles with the most visits.
+- After that, I will make a function called getList, which will sort the top 10 articles as links in a list, and with this function, there will be another program that retrieves the list to send it out via email
