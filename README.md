@@ -1,5 +1,8 @@
 # Newsletter
 
+**Instructions**
+python3 news.py
+
 **Peter Chen**
 - authentication.py
 - manageData.py
