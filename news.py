@@ -2,43 +2,40 @@ import requests
 import json
 from newsapi import NewsApiClient
 # pip install newsapi-python
+# https://newsapi.org/docs/get-started
 
-# Stored the api key in a seperate file and read it through the file
-# To protect the api key from leaking
-f = open("api.txt", "r")
-api = f.readline()
+def getNews():
 
-# url = ('http://newsapi.org/v2/top-headlines?'+ 
-#        'country=us&' + 
-#        api_key)
-# response = requests.get(url).json()
+    # Stored the api key in a seperate file and read it through the file
+    # To protect the api key from leaking
+    f = open("api.txt", "r")
+    api = f.readline()
 
-# print(json.dumps(response, indent=2))
+    # url = ('http://newsapi.org/v2/top-headlines?'+
+    #        'country=us&' +
+    #        api_key)
+    # response = requests.get(url).json()
 
-newsapi = NewsApiClient(api_key=api)
+    # print(json.dumps(response, indent=2))
 
-top_headlines = newsapi.get_top_headlines(country='us')
+    newsapi = NewsApiClient(api_key=api)
 
-count = 0;
-# empty list which will
-# contain all trending news
-results = []
-urls = []
-for article in top_headlines['articles']:
-    results.append(article["title"])
-    urls.append(article["url"])
+    top_headlines = newsapi.get_top_headlines(country='us')
 
-for i in range(len(results)):
-    # printing all trending news
-    print(i + 1, results[i])
-    print(urls[i])
-    print('\n')
+    count = 0
+    # empty list which will
+    # contain all trending news
+    results = []
+    urls = []
+    for article in top_headlines['articles']:
+        results.append(article["title"])
+        urls.append(article["url"])
 
-
-
-'''
-# importing requests package
-import requests
+    for i in range(len(results)):
+        # printing all trending news
+        print(i + 1, results[i])
+        print(urls[i])
+        print('\n')
 
 
 def NewsFromBBC():
@@ -93,4 +90,3 @@ if __name__ == '__main__':
     # function call
     #allNews()
     NewsFromBBC()
-'''
