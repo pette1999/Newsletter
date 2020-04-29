@@ -2,7 +2,6 @@
 
 **Instructions**
 in terminal type
-pip(3) install newsapi-python
 python(3) news.py
 
 **Peter Chen**
