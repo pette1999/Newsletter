@@ -1,7 +1,7 @@
 import requests
 import json
 from newsapi import NewsApiClient
-# pip install newsapi-python
+# pip3 install newsapi-python
 # https://newsapi.org/docs/get-started
 
 def getNews():
@@ -90,3 +90,4 @@ if __name__ == '__main__':
     # function call
     #allNews()
     NewsFromBBC()
+    getNews()
