@@ -15,11 +15,17 @@
 - Impove manageData.py for more fucntions
 
 **Meghana Shastri**
-- Doing research on how to connect to the Google News API 
+- Doing research on how to connect to the News API
+- getNews.py
+    - getNews.py currently retrieves the top 10 headlines of BBC news 
+    - this was done by fetching the data in the JSON format
+    - then the articles were stored as a variable and put in a list called results
+    - the urls for the articles were also stored in a list
+    - then using a for loop, the headline and url of each article was printed
 
 **Meghana Shastri TODO**
-- After Peter is able to establish a connection to the Google news API, I will write a program that will sort through the API to get the top 10 news articles with the most visits.
-- After that, I will make a function called getList, which will sort the top 10 articles as links in a list, and with this function, there will be another program that retrieves the list to send it out via email
+- Do research on how to use SMTP to send emails from one user to another in python
+- Make a program that uses STMP to send out the results and url lists (from getNews.py) in an email  
 
 **Audrey Bichelmeir**
 - Doing research on how to send emails daily by accessing the google sheets 
