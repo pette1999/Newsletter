@@ -1,7 +1,8 @@
 # Newsletter
 
 **Instructions**
-python3 news.py
+in terminal type
+python(3) news.py
 
 **Peter Chen**
 - authentication.py
