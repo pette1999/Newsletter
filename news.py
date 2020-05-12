@@ -9,27 +9,38 @@ def getNews():
     # Stored the api key in a seperate file and read it through the file
     # To protect the api key from leaking
     f = open("api.txt", "r")
-    api = f.readline()
+    api = f.readline().strip()
+    print("api: ", api)
 
-    url = ('http://newsapi.org/v2/top-headlines?'+
-           'country=us&' +
-           api)
+    url = ('http://newsapi.org/v2/top-headlines?' + 'country=us&' + api)
     top_headlines = requests.get(url).json()
+    articles = top_headlines["articles"]
 
     count = 0
     # empty list which will
     # contain all trending news
     results = []
     urls = []
-    for article in top_headlines["articles"]:
+    for article in articles:
         results.append(article["title"])
         urls.append(article["url"])
 
+    text = ""
     for i in range(len(results)):
         # printing all trending news
         print(i + 1, results[i])
         print(urls[i])
-        print('\n')
+        text += "<p>"
+        text += str(i+1)
+        text += "  "
+        text += results[i]
+        text += "\n"
+        text += urls[i]
+        text += "\n"
+        text += "</p>"
+        
+
+    return text
 
 
 def NewsFromBBC():
@@ -55,7 +66,6 @@ def NewsFromBBC():
         print(i + 1, results[i])
         print(urls[i])
 
-    # Driver Code
 
 #function to get top headlines in the US
 def allNews():
@@ -80,10 +90,11 @@ def allNews():
 
     #print(response.json())
 
-if __name__ == '__main__':
-    # function call
-    #allNews()
-    NewsFromBBC()
-    getNews()
-    
-    getNews()
+
+# if __name__ == '__main__':
+#     # function call
+#     #allNews()
+#     # NewsFromBBC()
+
+#     getNews()
+

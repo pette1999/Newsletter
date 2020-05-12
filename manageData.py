@@ -2,30 +2,23 @@ import gspread
 import authentication
 
 def getList():
-    json_file_name = 'hip-host-262902-bbbb44360c3f.json'
+    json_file_name = 'daily-newsletter-3f8ed4c4331e.json'
     credential = authentication.authenticate(json_file_name)
     gc = gspread.authorize(credential)
-    wks = gc.open("domainTest").sheet1
+    wks = gc.open("Clients").sheet1
 
     values_list = wks.col_values(1)
     return values_list
 
 
-def writeList(value_list):
-    json_file_name = 'hip-host-262902-bbbb44360c3f.json'
+def writeList(value_list, value):
+    json_file_name = 'daily-newsletter-3f8ed4c4331e.json'
     credential = authentication.authenticate(json_file_name)
     gc = gspread.authorize(credential)
-    wks = gc.open("domainTest").sheet1
+    wks = gc.open("Clients").sheet1
 
-    cell_list = wks.range('F1:F120')
+    wks.update_cell(len(value_list)+1, 1, value)
 
-    index = 0
-    for cell in cell_list:
-        if(index < len(value_list)):
-            cell.value = value_list[index]
-            index += 1
-
-    for i in cell_list:
-        print(i)
-
-    wks.update_cells(cell_list)
+def emailInput():
+    email = input("Please input your email here: ")
+    writeList(getList(), email)
