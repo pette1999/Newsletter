@@ -2,25 +2,25 @@
 
 **Libraries**
 - gspread
-    > pip install gspread
+    - pip install gspread
 - requests
-    > already in the python library
+    - already in the python library
 - json
-    > already in the python library
+    - already in the python library
 - sendgrid
-    > echo "export SENDGRID_API_KEY='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'" > sendgrid.env
-    > echo "sendgrid.env" >> .gitignore
-    > source ./sendgrid.env
-    > pip install sendgrid
+    - echo "export SENDGRID_API_KEY='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'" > sendgrid.env
+    - echo "sendgrid.env" >> .gitignore
+    - source ./sendgrid.env
+    - pip install sendgrid
 
 **Instructions**
-in terminal type
-    > pip install gspread
-    > echo "export SENDGRID_API_KEY='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'" > sendgrid.env
-    > echo "sendgrid.env" >> .gitignore
-    > source ./sendgrid.env
-    > pip install sendgrid
-    > python main.py
+- in terminal type
+    - pip install gspread
+    - echo "export SENDGRID_API_KEY='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'" > sendgrid.env
+    - echo "sendgrid.env" >> .gitignore
+    - source ./sendgrid.env
+    - pip install sendgrid
+    - python main.py
 
 
 **Peter Chen**
