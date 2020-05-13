@@ -1,8 +1,5 @@
 import requests
 import json
-# from newsapi import NewsApiClient
-# pip3 install newsapi-python
-# https://newsapi.org/docs/get-started
 
 def getNews():
 
@@ -25,6 +22,7 @@ def getNews():
         results.append(article["title"])
         urls.append(article["url"])
 
+    # put all information we got from the api into a text
     text = ""
     for i in range(len(results)):
         # printing all trending news
@@ -87,14 +85,3 @@ def allNews():
         # printing all trending news
         print(i + 1, results[i])
         print(urls[i])
-
-    #print(response.json())
-
-
-# if __name__ == '__main__':
-#     # function call
-#     #allNews()
-#     # NewsFromBBC()
-
-#     getNews()
-
