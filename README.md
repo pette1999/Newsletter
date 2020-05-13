@@ -13,7 +13,7 @@
     - source ./sendgrid.env
     - pip install sendgrid
 - gmail to send emails
-    - dailynewsletter@gamil.com
+    - dailynewsletter@gmail.com
     - pw: dailynewsletter
     - Client database: in google sheet, named Client
 
@@ -29,7 +29,8 @@
 **Meghana Shastri**
 - Doing research on how to connect to the News API
 - getNews.py(now in news.py)
-    - getNews.py currently retrieves the top 10 headlines of BBC news 
+    - NewsFromBBC() retrieved the top 10 headlines of BBC news 
+    - allNews()
     - this was done by fetching the data in the JSON format
     - then the articles were stored as a variable and put in a list called results
     - the urls for the articles were also stored in a list
